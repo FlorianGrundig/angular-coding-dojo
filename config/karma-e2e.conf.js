@@ -13,6 +13,7 @@ module.exports = function (config) {
     browsers: ['Chrome'],
 
     singleRun: true,
+    urlRoot: '/__karma/',
 
     proxies: {
       '/': 'http://localhost:8000/'

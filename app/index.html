@@ -1,15 +1,40 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" data-ng-app="angular-coding-dojo">
 <head>
-  <meta charset="utf-8">
-  <title>My HTML File</title>
-  <link rel="stylesheet" href="css/app.css">
-  <link rel="stylesheet" href="css/bootstrap.css">
-  <script src="lib/angular/angular.js"></script>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="lib/angular/angular.js"></script>
+    <script src="js/controllers/PhoneListCtrl.js"></script>
+    <script src="js/controllers/VersionInfoCtrl.js"></script>
+    <script src="js/module-angular-coding-dojo.js"></script>
 </head>
-<body>
+<body data-ng-controller="PhoneListCtrl">
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <!--Sidebar content-->
 
-  <p>Nothing here {{'yet' + '!'}}</p>
+            Search: <input data-ng-model="query">
+
+        </div>
+        <div class="span10">
+            <!--Body content-->
+            Phones:
+            <ul class="phones">
+                <li data-ng-repeat="phone in phones | filter:query">
+                    {{phone.name}}
+                    <p>{{phone.snippet}}</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+<div id="versionInfo" data-ng-controller="VersionInfoCtrl">
+    Version: {{version}} | erstellt am: {{createdAt}}
+</div>
 
 </body>
 </html>
