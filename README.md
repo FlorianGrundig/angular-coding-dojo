@@ -28,7 +28,16 @@ To see the changes which between any two lessons use the git diff command.
 
 ### step-0
 
-- Initial [angular-seed] project layout
+1. start app
+2. explore index.html => Versuch den Aufbau einer angular app zu erklaeren
+3. fix unit tests
+4. broke unit tests with realtime feedback
+5. fix e2e tests
+
+Lesson's learned
+1. Aufbau angular app
+2. Prinzip DI => Vorteile fuer JS-Entwicklung
+3. TDD => Vorteile fuer JS-Entwicklung
 
 
 ## Development with angular-seed
