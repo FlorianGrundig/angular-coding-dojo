@@ -26,8 +26,15 @@ You can check out any point of the tutorial using
 To see the changes which between any two lessons use the git diff command.
     git diff step-?..step-?
 
-### step-0
+### Vorbereitung
+1. Node-Js installieren
+2. git clone https://github.com/FlorianGrundig/angular-coding-dojo
+3. cd angular-coding-dojo
+4. npm install -g karma
+5. npm install -g karma-ng-scenario
 
+#### Step-0
+0. git checkout -f Step-0
 1. start app
 2. explore index.html => Versuch den Aufbau einer angular app zu erklaeren
 3. fix unit tests
@@ -39,6 +46,19 @@ To see the changes which between any two lessons use the git diff command.
 2. Prinzip DI => Vorteile fuer JS-Entwicklung
 3. TDD => Vorteile fuer JS-Entwicklung
 
+#### Step-1
+0. git checkout -f Step-1
+1. start app
+1.1 start unit tests
+1.2 fix unit tests (look at karma.conf => include module js => why is it not running?)
+2. explore index.html => warum phones.data?
+3. fix e2e tests (http://localhost:8000/test/e2e/runner.html)
+4. try e2e with more browsers
+
+##### Lesson's learned
+1. Ausbau DI
+2. Promises
+2. Easy Mocking
 
 ## Development with angular-seed
 
