@@ -4,13 +4,21 @@
 describe('PhoneCat controllers', function () {
 
   describe('PhoneListCtrl', function () {
+    var phoneService,
+      scope = {};
 
-    it('should create "phones" model with 3 phones', function () {
-      var scope = {}
+    beforeEach(function() {
+      phoneService = jasmine.createSpyObj('PhoneServiceMock',['getPhoneList'])
 
-      PhoneListCtrl(scope);
+    });
 
-      expect(scope.phones.length).toBe(3);
+    it('should save result of PhoneService to $scope.phones', function () {
+      var somePhones = {phone: 'foo'};
+      phoneService.getPhoneList.andReturn(somePhones);
+
+      PhoneListCtrl(scope, phoneService);
+
+      expect(scope.phones).toBe(somePhones);
     });
   });
 });

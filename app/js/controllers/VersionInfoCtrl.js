@@ -2,7 +2,7 @@
 
 /* Controllers */
 
-function VersionInfoCtrl($scope) {
-  $scope.version = 'unknown';
-  $scope.createdAt = 'unknown';
+function VersionInfoCtrl($scope, versionInfo) {
+  $scope.version = versionInfo.version;
+  $scope.createdAt = versionInfo.createdAt;
 }
