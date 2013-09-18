@@ -34,7 +34,7 @@ To see the changes which between any two lessons use the git diff command.
 4. broke unit tests with realtime feedback
 5. fix e2e tests
 
-Lesson's learned
+##### Lesson's learned
 1. Aufbau angular app
 2. Prinzip DI => Vorteile fuer JS-Entwicklung
 3. TDD => Vorteile fuer JS-Entwicklung
