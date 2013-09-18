@@ -55,6 +55,17 @@ To see the changes which between any two lessons use the git diff command.
 3. fix e2e tests (http://localhost:8000/test/e2e/runner.html)
 4. try e2e with more browsers
 
+#### Step-2
+0. git checkout -f Step-2
+1. start app
+2. explore index.html
+3. explore module-angular-coding-dojo.js (no controller in markup)
+4. look at phone-list.html (ng-src)
+5. look at PhoneDetailCtrl (how is the id parameter passed?)
+6. look at phone-detail.html (what happens, when user clicks on thumb img, filter “checkmark”, look at a phones/*.json)
+7. look at the unit tests how to use angular mocks
+8. look at the e2e tests (binding)
+
 ##### Lesson's learned
 1. Ausbau DI
 2. Promises

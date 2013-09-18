@@ -1,44 +1,19 @@
 <!doctype html>
-<html lang="en" data-ng-app="angular-coding-dojo">
+<html lang="en" ng-app="phonecat">
 <head>
     <meta charset="utf-8">
     <title>Google Phone Gallery</title>
     <link rel="stylesheet" href="css/app.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <script src="lib/angular/angular.js"></script>
+    <script src="js/controllers/PhoneDetailCtrl.js"></script>
     <script src="js/controllers/PhoneListCtrl.js"></script>
-    <script src="js/controllers/VersionInfoCtrl.js"></script>
-    <script src="js/services/PhoneService.js"></script>
+    <script src="js/filters/PhoneCatFilters.js"></script>
     <script src="js/module-angular-coding-dojo.js"></script>
 </head>
-<body data-ng-controller="PhoneListCtrl">
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span2">
-            <!--Sidebar content-->
+<body>
 
-            Search: <input data-ng-model="query">
-            Sort by:
-            <select ng-model="orderProp">
-                <option value="name">Alphabetical</option>
-                <option value="age">Newest</option>
-            </select>
-
-        </div>
-        <div class="span10">
-            <!--Body content-->
-            Phones:
-            <ul class="phones">
-                <li ng-repeat="phone in phones.data | filter:query">
-                {{phone.name}}
-                    <p>{{phone.snippet}}</p>
-                </li>
-            </ul>
-
-        </div>
-    </div>
-</div>
-<div id="versionInfo" data-ng-controller="VersionInfoCtrl">Version: {{version}} | erstellt am: {{createdAt}}</div>
+<div ng-view></div>
 
 </body>
 </html>

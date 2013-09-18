@@ -1,9 +1,11 @@
-angular
-  .module('angular-coding-dojo', [])
+'use strict';
 
-  .value('versionInfo', { version: "v0.1", createdAt: "18.09.2013"} )
+/* App Module */
 
-  .controller('PhoneListCtrl', PhoneListCtrl)
-  .controller('VersionInfoCtrl', VersionInfoCtrl)
-
-  .service('PhoneService', PhoneService)
+angular.module('phonecat', ['phonecatFilters']).
+  config(['$routeProvider', function($routeProvider) {
+    $routeProvider.
+      when('/phones', {templateUrl: 'partials/phone-list.html',   controller: PhoneListCtrl}).
+      when('/phones/:phoneId', {templateUrl: 'partials/phone-detail.html', controller: PhoneDetailCtrl}).
+      otherwise({redirectTo: '/phones'});
+  }]);
