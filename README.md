@@ -66,10 +66,7 @@ To see the changes which between any two lessons use the git diff command.
 7. look at the unit tests how to use angular mocks
 8. look at the e2e tests (binding)
 
-##### Lesson's learned
-1. Ausbau DI
-2. Promises
-2. Easy Mocking
+
 
 ## Development with angular-seed
 
